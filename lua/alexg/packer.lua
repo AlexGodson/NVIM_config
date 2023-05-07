@@ -8,9 +8,10 @@ return require("packer").startup(function(use)
 	use "fedepujol/move.nvim"		-- move {multiple} lines
 	use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 	use { "junegunn/fzf", run = "./install --bin"}
-	use { "ibhagwan/fzf-lua",
-	-- optional for icon support
-	requires = { "nvim-tree/nvim-web-devicons" }
+	use { 
+		"ibhagwan/fzf-lua",
+		-- optional for icon support
+		requires = { "nvim-tree/nvim-web-devicons" }
 	}
 	use {
 		"williamboman/mason.nvim",
@@ -29,13 +30,15 @@ return require("packer").startup(function(use)
 			{"L3MON4D3/LuaSnip"}      -- Required
 		}
 	}
-	use { "anuvyklack/windows.nvim",
+	use { 
+		"anuvyklack/windows.nvim",
 		requires = {
 			"anuvyklack/middleclass",
 			"anuvyklack/animation.nvim"
 		}
 	}
-	use { "nvim-lualine/lualine.nvim",
+	use {
+		"nvim-lualine/lualine.nvim",
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
 end)
