@@ -1,6 +1,3 @@
--- Only required if you have packer configured as `opt`
--- vim.cmd [[packadd packer.nvim]]
-
 return require("packer").startup(function(use)
 	use "wbthomason/packer.nvim"
 
@@ -29,13 +26,16 @@ return require("packer").startup(function(use)
 			{"williamboman/mason-lspconfig.nvim"},	-- Autocompletion
 			{"hrsh7th/nvim-cmp"},     -- Required
 			{"hrsh7th/cmp-nvim-lsp"}, -- Required
-			{"L3MON4D3/LuaSnip"},     -- Required
+			{"L3MON4D3/LuaSnip"}      -- Required
 		}
 	}
 	use { "anuvyklack/windows.nvim",
-	requires = {
-		"anuvyklack/middleclass",
-		"anuvyklack/animation.nvim"
-	},
-}
+		requires = {
+			"anuvyklack/middleclass",
+			"anuvyklack/animation.nvim"
+		}
+	}
+	use { "nvim-lualine/lualine.nvim",
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+	}
 end)

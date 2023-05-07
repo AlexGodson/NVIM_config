@@ -7,3 +7,4 @@ vim.bo.softtabstop = 4			-- displays 4 spaces as a tab
 vim.bo.shiftwidth = 4			-- idk
 vim.bo.autoindent = true		-- Auto indents to match previous
 
+vim.cmd("source ~/.config/nvim/lua/alexg/packer.lua")
